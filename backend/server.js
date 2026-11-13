@@ -10,9 +10,17 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
-    res.json({
-        message: "Welcome to KLYRO Smart Team Collaboration Platform",
-        status: "Server Running Successfully"
+    res.status(200).json({
+        success: true,
+        message: "Welcome to KLYRO",
+        platform: "Smart Team Collaboration Platform"
+    });
+});
+
+app.get("/api/health", (req, res) => {
+    res.status(200).json({
+        success: true,
+        status: "Healthy"
     });
 });
 

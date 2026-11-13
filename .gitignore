@@ -14,3 +14,8 @@ npm-debug.log*
 
 .vscode/
 .idea/
+node_modules/
+
+.env
+.DS_Store
+*.log

@@ -1,0 +1,12 @@
+{
+  "name": "klyro",
+  "version": "1.0.0",
+  "description": "Smart Team Collaboration Platform",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

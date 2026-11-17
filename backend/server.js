@@ -27,3 +27,9 @@ app.get("/api/health", (req, res) => {
 app.listen(PORT, () => {
     console.log(`KLYRO Server running on port ${PORT}`);
 });
+const userRoutes = require("./routes/userRoutes");
+
+app.use("/api/users", userRoutes);
+const teamRoutes = require("./routes/teamRoutes");
+
+app.use("/api/teams", teamRoutes);

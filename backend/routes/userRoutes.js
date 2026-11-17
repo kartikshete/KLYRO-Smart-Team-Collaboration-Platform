@@ -23,3 +23,24 @@ router.put('/profile', protect, updateProfile);
 router.delete('/profile', protect, deleteProfile);
 
 module.exports = router;
+const express = require("express");
+const router = express.Router();
+
+const {
+    getProfile,
+    getUsers,
+    updateUser,
+    deleteUser
+} = require("../controllers/userController");
+
+const { protect, admin } = require("../middleware/auth");
+
+router.get("/profile", protect, getProfile);
+
+router.get("/", protect, admin, getUsers);
+
+router.put("/:id", protect, updateUser);
+
+router.delete("/:id", protect, admin, deleteUser);
+
+module.exports = router;
